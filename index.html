@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Compounded Semaglutide | Precision Telemed</title>
+  <meta name="description" content="The original GLP-1 weight loss breakthrough — now compounded and made affordable. Semaglutide prescribed by board-certified doctors, delivered to your door. Start for $149 your first month." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+  <style>
+    /* ─────────────────────────────────────────────
+       CSS CUSTOM PROPERTIES — Precision Telemed Theme
+    ───────────────────────────────────────────── */
+    :root {
+      --color-bg:          #ffffff;
+      --color-bg-alt:      #ffffff;
+      --color-card:        #ffffff;
+      --color-fg:          hsl(150, 18%, 25%);
+      --color-fg-muted:    hsl(150, 10%, 45%);
+      --color-primary:     #788C75;
+      --color-primary-rgb: 120, 140, 117;
+      --color-primary-dk:  #5a6b58;
+      --color-primary-lt:  #9aab97;
+      --color-border:      hsl(40, 20%, 88%);
+      --color-accent-gold: hsl(43, 60%, 52%);
+      --color-accent-sage: #788C75;
+      --color-white:       #ffffff;
+      --color-dark:        hsl(150, 15%, 20%);
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body:    'Inter', system-ui, sans-serif;
+      --section-gap:  clamp(1.5rem, 3.5vw, 2.75rem);
+      --container:    1280px;
+      --radius-sm:    0.5rem;
+      --radius-md:    1rem;
+      --radius-lg:    1.5rem;
+      --radius-xl:    2rem;
+      --radius-full:  9999px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.12), 0 4px 12px rgba(0,0,0,.06);
+      --shadow-xl: 0 24px 64px rgba(0,0,0,.16), 0 8px 24px rgba(0,0,0,.08);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-fg); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+    .section { padding: var(--section-gap) 0; }
+    .section--alt { background: var(--color-bg-alt); }
+
+    .eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .6875rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-primary); }
+    .eyebrow--light { color: var(--color-primary-lt); }
+    .eyebrow__dot { width: 6px; height: 6px; border-radius: var(--radius-full); background: currentColor; flex-shrink: 0; }
+
+    .heading-xl { font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 5.25rem); font-weight: 700; line-height: 1.05; letter-spacing: -.02em; }
+    .heading-lg { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3.75rem); font-weight: 700; line-height: 1.1; letter-spacing: -.02em; }
+    .heading-md { font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 600; line-height: 1.2; }
+
+    .text-muted { color: var(--color-fg-muted); }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font-family: var(--font-body); font-size: .9375rem; font-weight: 600; line-height: 1; padding: 1rem 2.25rem; border-radius: var(--radius-full); border: 2px solid transparent; cursor: pointer; transition: all .28s var(--ease-out-expo); white-space: nowrap; text-align: center; letter-spacing: .01em; }
+    .btn--primary { background: var(--color-primary); color: var(--color-white); border-color: var(--color-primary); }
+    .btn--primary:hover { background: var(--color-fg); color: var(--color-white); border-color: var(--color-fg); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), .35); }
+    .btn--outline { background: transparent; color: var(--color-fg); border-color: var(--color-border); }
+    .btn--outline:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); }
+    .btn--white { background: var(--color-white); color: var(--color-fg); border-color: var(--color-white); }
+    .btn--white:hover { background: var(--color-bg); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .btn--ghost-white { background: rgba(255,255,255,.12); color: var(--color-white); border-color: rgba(255,255,255,.3); backdrop-filter: blur(8px); }
+    .btn--ghost-white:hover { background: rgba(255,255,255,.22); transform: translateY(-2px); }
+    .btn--lg { padding: 1.2rem 2.75rem; font-size: 1.0625rem; }
+    .btn--sm { padding: .6rem 1.4rem; font-size: .8125rem; }
+    .btn__arrow { transition: transform .25s var(--ease-out-expo); }
+    .btn:hover .btn__arrow { transform: translateX(4px); }
+
+    .reveal { opacity: 1; transform: translateY(0); transition: opacity .7s var(--ease-out-expo), transform .7s var(--ease-out-expo); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal--left { transform: translateX(-28px); }
+    .reveal--left.visible { transform: translateX(0); }
+    .reveal--right { transform: translateX(28px); }
+    .reveal--right.visible { transform: translateX(0); }
+    .delay-1 { transition-delay: .1s; }
+    .delay-2 { transition-delay: .2s; }
+    .delay-3 { transition-delay: .3s; }
+    .delay-4 { transition-delay: .4s; }
+    .delay-5 { transition-delay: .5s; }
+
+    /* ── TRUST BAR ── */
+    #trust-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(17,27,20,0.97); border-bottom: 1px solid rgba(103,112,93,.4); backdrop-filter: blur(16px); height: 2.5rem; display: flex; align-items: center; overflow: hidden; }
+    .trust-bar__track { display: flex; align-items: center; white-space: nowrap; animation: marquee 22s linear infinite; }
+    .trust-bar__item { display: inline-flex; align-items: center; gap: .5rem; padding: 0 2.5rem; font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.75); }
+    .trust-bar__item i { color: var(--color-primary-lt); font-size: .625rem; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ── NAVBAR ── */
+    #navbar { position: fixed; top: 2.5rem; left: 0; right: 0; z-index: 90; height: 4.25rem; background: rgba(253,251,247,0.0); transition: background .35s, box-shadow .35s; }
+    #navbar.scrolled { background: rgba(253,251,247,0.92); box-shadow: 0 1px 0 var(--color-border), 0 4px 20px rgba(0,0,0,.06); backdrop-filter: blur(20px); }
+    .navbar__inner { height: 100%; display: flex; align-items: center; gap: 1.5rem; }
+    .navbar__logo img { height: 2rem; width: auto; }
+    .navbar__links { display: none; list-style: none; gap: 1.75rem; align-items: center; margin-left: 1rem; }
+    @media (min-width: 1024px) { .navbar__links { display: flex; } }
+    .navbar__links a { font-size: .875rem; font-weight: 500; color: rgba(255,255,255,.8); transition: color .2s; }
+    #navbar.scrolled .navbar__links a { color: var(--color-fg-muted); }
+    .navbar__links a:hover { color: var(--color-white); }
+    #navbar.scrolled .navbar__links a:hover { color: var(--color-primary); }
+    .navbar__ctas { display: none; align-items: center; gap: .875rem; margin-left: auto; }
+    @media (min-width: 1024px) { .navbar__ctas { display: flex; } }
+    .navbar__hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: .5rem; margin-left: auto; }
+    @media (min-width: 1024px) { .navbar__hamburger { display: none; } }
+    .navbar__hamburger span { display: block; width: 22px; height: 2px; background: var(--color-white); border-radius: 2px; transition: background .3s; }
+    #navbar.scrolled .navbar__hamburger span { background: var(--color-fg); }
+    .mobile-nav { position: fixed; top: 6.75rem; left: 0; right: 0; z-index: 88; background: rgba(253,251,247,0.97); backdrop-filter: blur(20px); border-bottom: 1px solid var(--color-border); padding: 1.5rem clamp(1.25rem,4vw,3rem); transform: translateY(-110%); opacity: 0; transition: transform .4s var(--ease-out-expo), opacity .4s; pointer-events: none; }
+    .mobile-nav.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+    .mobile-nav ul { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+    .mobile-nav ul li a { font-size: 1rem; font-weight: 500; color: var(--color-fg); transition: color .2s; }
+    .mobile-nav ul li a:hover { color: var(--color-primary); }
+    .mobile-nav__ctas { display: flex; flex-direction: column; gap: .75rem; }
+
+    /* ── HERO ── */
+    #hero { position: relative; height: auto; min-height: clamp(420px, 42vw, 640px); display: flex; align-items: flex-start; padding-top: 5.5rem; padding-bottom: 1.5rem; margin-bottom: 0; overflow: hidden; }
+    .hero__bg { position: absolute; inset: 0; z-index: 0; }
+    .hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 80% top; }
+    .hero__overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to right, rgba(10,18,13,.72) 0%, rgba(10,18,13,.40) 55%, rgba(10,18,13,.08) 100%), linear-gradient(to top, rgba(10,18,13,.52) 0%, transparent 50%); }
+    .hero__content { position: relative; z-index: 2; width: 100%; padding: 0; }
+    .hero__badge { display: block; margin-bottom: 1rem; }
+    .hero__badge-heading { font-family: var(--font-heading); font-size: clamp(3rem, 7vw, 6rem); font-weight: 700; line-height: 1; letter-spacing: -.03em; color: var(--color-white); display: block; }
+    @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb),.3); } 50% { box-shadow: 0 0 0 7px rgba(var(--color-primary-rgb),0); } }
+    /* Trustpilot hero badge */
+    .hero__trustpilot { display: inline-flex; align-items: center; gap: .375rem; margin-bottom: 1.25rem; width: fit-content; text-decoration: none; transition: opacity .2s; }
+    .hero__trustpilot:hover { opacity: .75; }
+    .hero__tp-excellent { font-size: .75rem; font-weight: 500; color: rgba(255,255,255,.9); white-space: nowrap; letter-spacing: .01em; }
+    .hero__tp-stars { display: inline-flex; gap: 2px; align-items: center; line-height: 0; }
+    .hero__tp-star { display: block; width: 16px; height: 16px; flex-shrink: 0; flex-grow: 0; }
+    .hero__tp-star svg { width: 16px; height: 16px; display: block; }
+    .hero__tp-divider { width: 1px; height: 12px; background: rgba(255,255,255,.25); flex-shrink: 0; }
+    .hero__tp-logo { display: inline-flex; align-items: center; gap: 3px; }
+    .hero__tp-wordmark { font-size: .7rem; font-weight: 600; color: rgba(255,255,255,.85); white-space: nowrap; letter-spacing: .01em; }
+    .hero__title { font-family: var(--font-heading); font-size: clamp(1.25rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; letter-spacing: -.01em; color: var(--color-primary-lt); margin-bottom: 1.5rem; font-style: italic; }
+    .hero__title em { font-style: normal; font-weight: 600; color: rgba(255,255,255,.85); }
+    .hero__subtitle { font-size: clamp(.875rem, 1.4vw, 1rem); font-weight: 400; color: rgba(255,255,255,.6); line-height: 1.75; max-width: 440px; margin-bottom: 2rem; letter-spacing: .01em; }
+    .hero__ctas { display: flex; flex-wrap: wrap; gap: .875rem; margin-bottom: 0; }
+    /* Scarcity pulse dot */
+    @keyframes pulse-dot { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: .5; } }
+
+
+    /* ── SOCIAL PROOF ── */
+    .social-proof-strip { background: var(--color-primary); padding: 1rem 0; overflow: hidden; }
+    .social-proof-strip__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(.5rem,2vw,2rem); }
+    .sp-item { display: flex; align-items: center; gap: .4rem; font-size: .75rem; color: rgba(255,255,255,.65); white-space: nowrap; flex-shrink: 0; }
+    .sp-item i { color: var(--color-primary-lt); font-size: .875rem; }
+    .sp-item strong { color: var(--color-white); }
+    .sp-divider { width: 1px; height: 1rem; background: rgba(255,255,255,.2); flex-shrink: 0; }
+
+    /* ── SCIENCE ── */
+    .science-grid { display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: stretch; }
+    @media (min-width: 900px) { .science-grid { grid-template-columns: 1fr 1fr; } }
+    .science-visual { position: relative; border-radius: var(--radius-xl); overflow: hidden; height: 420px; background: #0a160e; }
+    @media (min-width: 900px) { .science-visual { height: 100%; min-height: 420px; } }
+    .science-copy { display: flex; flex-direction: column; justify-content: space-between; }
+    .science-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .science-chart-wrap { position: absolute; inset: 0; padding: 1.5rem 1.5rem 5rem; display: flex; flex-direction: column; }
+    .science-chart-title { font-family: var(--font-heading); font-size: .75rem; font-weight: 700; color: rgba(255,255,255,.5); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .75rem; }
+    .science-chart-legend { display: flex; gap: 1.25rem; margin-bottom: .75rem; }
+    .science-chart-legend-item { display: flex; align-items: center; gap: .4rem; font-size: .7rem; font-weight: 600; color: rgba(255,255,255,.65); }
+    .science-chart-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .science-chart-canvas-wrap { flex: 1; position: relative; min-height: 0; }
+    .science-visual__badge { position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: rgba(10,22,14,0.78); backdrop-filter: blur(12px); border-radius: var(--radius-md); padding: 1rem 1.25rem; }
+    .science-visual__badge-title { font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--color-white); margin-bottom: .25rem; }
+    .science-visual__badge-sub { font-size: .75rem; color: rgba(255,255,255,.5); letter-spacing: .04em; }
+    .mechanism-cards { display: grid; grid-template-columns: 1fr 1fr; gap: .875rem; margin-top: 1.75rem; }
+    @media (max-width: 480px) { .mechanism-cards { grid-template-columns: 1fr; } }
+    .mechanism-card { background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.25rem; transition: border-color .3s, box-shadow .3s; }
+    .mechanism-card:hover { border-color: rgba(var(--color-primary-rgb),.4); box-shadow: var(--shadow-sm); }
+    .mechanism-card__icon { width: 2.25rem; height: 2.25rem; background: rgba(var(--color-primary-rgb),.12); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: .875rem; margin-bottom: .75rem; }
+    .mechanism-card h4 { font-family: var(--font-heading); font-size: .9375rem; font-weight: 600; margin-bottom: .4rem; }
+    .mechanism-card p { font-size: .8rem; color: var(--color-fg-muted); line-height: 1.6; }
+
+    /* ── STATS BAND ── */
+    .stats-band { background: linear-gradient(135deg, var(--color-primary-dk) 0%, var(--color-fg) 100%); padding: 4rem 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; text-align: center; }
+    @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4,1fr); } }
+    .stat-item__num { font-family: var(--font-heading); font-size: clamp(2.5rem,5vw,4rem); font-weight: 700; color: var(--color-white); line-height: 1; margin-bottom: .375rem; }
+    .stat-item__label { font-size: .8125rem; color: rgba(255,255,255,.6); font-weight: 500; letter-spacing: .03em; }
+
+    /* ── BENEFITS ── */
+    .benefits-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+    @media (min-width: 900px) { .benefits-grid { grid-template-columns: 1fr 1fr; } }
+    .benefits-list { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
+    .benefit-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .benefit-item__icon { width: 2.5rem; height: 2.5rem; flex-shrink: 0; background: rgba(var(--color-primary-rgb),.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1rem; border: 1px solid rgba(var(--color-primary-rgb),.15); }
+    .benefit-item__text strong { display: block; font-weight: 600; margin-bottom: .25rem; }
+    .benefit-item__text span { font-size: .875rem; color: var(--color-fg-muted); line-height: 1.6; }
+    .benefits-visual { position: relative; border-radius: var(--radius-xl); overflow: hidden; height: 480px; }
+    @media (min-width: 900px) { .benefits-visual { height: auto; min-height: 400px; } }
+    .benefits-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .benefits-visual__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,22,14,.3) 0%, transparent 60%); }
+
+    /* ── HOW IT WORKS ── */
+    .steps-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .steps-grid { grid-template-columns: repeat(3,1fr); } }
+    .step-card { position: relative; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2.25rem 1.75rem; overflow: hidden; transition: border-color .3s, box-shadow .3s, transform .35s var(--ease-out-expo); }
+    .step-card:hover { border-color: rgba(var(--color-primary-rgb),.35); box-shadow: var(--shadow-md); transform: translateY(-6px); }
+    .step-card__num { position: absolute; top: 1.25rem; right: 1.5rem; font-family: var(--font-heading); font-size: 5rem; font-weight: 700; color: rgba(var(--color-primary-rgb),.07); line-height: 1; pointer-events: none; }
+    .step-card__icon-wrap { width: 3rem; height: 3rem; border-radius: var(--radius-md); background: rgba(var(--color-primary-rgb),.1); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.125rem; margin-bottom: 1.25rem; }
+    .step-card h3 { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600; margin-bottom: .625rem; }
+    .step-card p { font-size: .875rem; color: var(--color-fg-muted); line-height: 1.7; }
+
+    /* ── CALCULATOR ── */
+    .calculator-wrapper { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+    @media (min-width: 900px) { .calculator-wrapper { grid-template-columns: 1fr 1fr; } }
+    .calculator-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-md); }
+    .calc-label { display: flex; justify-content: space-between; align-items: center; font-size: .875rem; font-weight: 600; margin-bottom: .75rem; }
+    .calc-slider { width: 100%; accent-color: var(--color-primary); margin-bottom: 1.5rem; cursor: pointer; }
+    .calc-result { background: rgba(var(--color-primary-rgb),.07); border: 1px solid rgba(var(--color-primary-rgb),.15); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center; margin-top: 1.5rem; }
+    .calc-result__label { font-size: .8125rem; font-weight: 600; color: var(--color-fg-muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .5rem; }
+    .calc-result__value { font-family: var(--font-heading); font-size: 3.5rem; font-weight: 700; color: var(--color-primary); line-height: 1; }
+    .calc-result__unit { font-size: 1.5rem; font-weight: 600; color: var(--color-fg-muted); }
+    .calc-result__disclaimer { font-size: .7rem; color: var(--color-fg-muted); margin-top: 1rem; line-height: 1.6; }
+    .calc-num-animate { display: inline-block; transition: transform .3s var(--ease-out-expo), opacity .3s; }
+    .calc-num-animate.changing { transform: translateY(-8px); opacity: 0; }
+
+    /* ── PRICING ── */
+    .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+    @media (min-width: 640px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) { .pricing-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    /* Mobile card order: Standard → Advanced → Maintenance */
+    @media (max-width: 639px) {
+      .pricing-card--maintenance { order: 3; }
+      .pricing-card--featured    { order: 1; }
+      .pricing-card--advanced    { order: 2; }
+      .pricing-card { padding: 1.75rem 1.5rem; }
+      .pricing-card__price-amount { font-size: 2.25rem; }
+      .pricing-card__badge { right: 1.25rem; }
+    }
+    .pricing-card--advanced { border-color: rgba(var(--color-primary-rgb),.55); box-shadow: var(--shadow-lg); background: linear-gradient(160deg, var(--color-card) 60%, rgba(var(--color-primary-rgb),.06) 100%); }
+    .pricing-card--advanced .pricing-card__badge { background: var(--color-primary-dk); }
+    .monj-badge { display: inline-flex; align-items: center; gap: .5rem; background: rgba(var(--color-primary-rgb),.1); border: 1px solid rgba(var(--color-primary-rgb),.25); border-radius: var(--radius-full); padding: .3rem .75rem .3rem .5rem; margin-bottom: 1.25rem; text-decoration: none; transition: background .2s; }
+    .monj-badge:hover { background: rgba(var(--color-primary-rgb),.18); }
+    .monj-badge__icon { width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .monj-badge__icon i { font-size: .55rem; color: #fff; }
+    .monj-badge__text { font-size: .7rem; font-weight: 700; color: var(--color-primary-dk); letter-spacing: .04em; text-transform: uppercase; }
+    .pricing-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 2.25rem; position: relative; transition: border-color .3s, box-shadow .3s, transform .35s var(--ease-out-expo); }
+    .pricing-card:hover { border-color: rgba(var(--color-primary-rgb),.35); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .pricing-card--featured { border-color: rgba(var(--color-primary-rgb),.45); box-shadow: var(--shadow-md); }
+    .pricing-card__badge { position: absolute; top: -1px; right: 1.75rem; background: var(--color-primary); color: var(--color-white); font-size: .6875rem; font-weight: 700; letter-spacing: .08em; padding: .3rem .875rem; border-radius: 0 0 var(--radius-full) var(--radius-full); }
+    .pricing-card__dose { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: .35rem; }
+    .pricing-card__title { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 600; margin-bottom: 1rem; }
+    .pricing-card__price { display: flex; align-items: baseline; gap: .25rem; margin-bottom: 1rem; }
+    .pricing-card__price-amount { font-family: var(--font-heading); font-size: 3rem; font-weight: 700; line-height: 1; color: var(--color-fg); }
+    .pricing-card__price-per { font-size: .875rem; color: var(--color-fg-muted); font-weight: 500; }
+    .pricing-card__features { list-style: none; display: flex; flex-direction: column; gap: .75rem; margin-bottom: 1.75rem; }
+    .pricing-card__features li { display: flex; align-items: center; gap: .625rem; font-size: .875rem; }
+    .pricing-card__features li i { color: var(--color-primary); font-size: .8rem; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 640px) { .testimonials-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(3,1fr); } }
+    .testimonial-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 1.875rem; display: flex; flex-direction: column; gap: 1.25rem; transition: border-color .3s, box-shadow .3s, transform .35s var(--ease-out-expo); }
+    .testimonial-card:hover { border-color: rgba(var(--color-primary-rgb),.3); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .testimonial-stars { display: flex; gap: .25rem; }
+    .testimonial-stars i { color: var(--color-accent-gold); font-size: .875rem; }
+    .testimonial-quote { font-size: .9375rem; line-height: 1.7; color: var(--color-fg); font-style: italic; flex: 1; }
+    .testimonial-author { display: flex; align-items: center; gap: .875rem; }
+    .testimonial-avatar { width: 2.5rem; height: 2.5rem; border-radius: var(--radius-full); background: rgba(var(--color-primary-rgb),.15); color: var(--color-primary-dk); font-size: .75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .testimonial-author-name { font-weight: 600; font-size: .875rem; }
+    .testimonial-author-sub { font-size: .75rem; color: var(--color-fg-muted); }
+    .testimonial-loss-badge { background: rgba(var(--color-primary-rgb),.1); color: var(--color-primary-dk); border: 1px solid rgba(var(--color-primary-rgb),.2); border-radius: var(--radius-full); padding: .25rem .7rem; font-size: .7rem; font-weight: 700; white-space: nowrap; }
+    .testimonial-loss-badge i { margin-right: .2rem; }
+
+    /* ── BEFORE & AFTER ── */
+    .before-after-section .benefits-visual__photo {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      height: 260px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .before-after-section .benefits-visual__photo img { width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block; transition:transform .6s ease; }
+    .before-after-section .benefits-visual__photo:hover img { transform:scale(1.03); }
+    .benefits-visual__label { position:absolute; bottom:.875rem; left:.875rem; background:rgba(0,0,0,.55); color:#fff; font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:.3rem .7rem; border-radius:99px; border:1px solid rgba(255,255,255,.15); }
+
+    /* ── WHY / BENEFITS CARDS ── */
+    .why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; }
+    @media (min-width:768px) { .why-grid { grid-template-columns:repeat(3,1fr); gap:1.5rem; } }
+    .why-card { background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:1.75rem 1.5rem; display:flex; flex-direction:column; gap:.75rem; transition:border-color .3s, box-shadow .3s, transform .3s; }
+    .why-card:hover { border-color:rgba(var(--color-primary-rgb),.35); box-shadow:0 8px 28px rgba(0,0,0,.1); transform:translateY(-3px); }
+    .why-card__icon { width:2.75rem; height:2.75rem; border-radius:.75rem; background:linear-gradient(135deg,rgba(var(--color-primary-rgb),.18),rgba(var(--color-primary-rgb),.06)); display:flex; align-items:center; justify-content:center; color:var(--color-primary); font-size:1rem; flex-shrink:0; }
+    .why-card__title { font-family:var(--font-heading); font-size:1rem; font-weight:700; color:var(--color-fg); line-height:1.25; margin:0; }
+    .why-card__desc { font-size:.8125rem; color:var(--color-fg-muted); line-height:1.6; margin:0; }
+
+    /* ── STEP CARD TIME BADGE ── */
+    .step-card__time { display:inline-flex; align-items:center; gap:.35rem; background:rgba(var(--color-primary-rgb),.1); color:var(--color-primary-dk); font-size:.65rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:.25rem .6rem; border-radius:var(--radius-full); margin-bottom:.625rem; }
+
+    /* ── PHARMACY ── */
+    .pharmacy-section { background: linear-gradient(160deg, var(--color-fg) 0%, var(--color-primary-dk) 100%); padding: var(--section-gap) 0; overflow: hidden; position: relative; }
+    .pharmacy-section::before { content:''; position:absolute; top:-120px; right:-120px; width:480px; height:480px; border-radius:50%; background:rgba(var(--color-primary-rgb),.12); pointer-events:none; }
+    .pharmacy-section::after  { content:''; position:absolute; bottom:-80px; left:-80px; width:320px; height:320px; border-radius:50%; background:rgba(var(--color-primary-rgb),.08); pointer-events:none; }
+    .pharmacy-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; position:relative; z-index:1; }
+    @media (min-width: 900px) { .pharmacy-grid { grid-template-columns: 340px 1fr; gap: 5rem; } }
+    /* Logo card */
+    .pharmacy-logo-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+    }
+    .pharmacy-logo-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(var(--color-primary-rgb),.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    /* The themed pharmacy logo mark */
+    .pharmacy-logo-mark {
+      width: 160px;
+      height: 160px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.1);
+      flex-shrink: 0;
+    }
+    .pharmacy-logo-name {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--color-white);
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+    .pharmacy-logo-name span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--color-primary-lt);
+      margin-top: .3rem;
+    }
+    .pharmacy-logo-divider {
+      width: 48px;
+      height: 1px;
+      background: rgba(255,255,255,.15);
+    }
+    .pharmacy-logo-sub { font-size: .75rem; color: rgba(255,255,255,.4); letter-spacing: .1em; text-transform: uppercase; }
+    .pharmacy-badge-row { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+    .pharmacy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: rgba(var(--color-primary-rgb),.18);
+      border: 1px solid rgba(var(--color-primary-rgb),.35);
+      border-radius: var(--radius-full);
+      padding: .3rem .8rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--color-primary-lt);
+    }
+    .pharmacy-badge i { font-size: .55rem; }
+    /* Content side */
+    .pharmacy-content h2 { font-family: var(--font-heading); font-size: clamp(1.75rem,3.5vw,2.75rem); font-weight: 700; color: var(--color-white); line-height: 1.1; margin: .75rem 0 1rem; letter-spacing: -.02em; }
+    .pharmacy-content h2 em { font-style: italic; font-weight: 400; color: var(--color-primary-lt); }
+    .pharmacy-content p { font-size: .9375rem; color: rgba(255,255,255,.55); line-height: 1.8; margin-bottom: 1.75rem; }
+    .pharmacy-list { list-style: none; padding: 0; margin: 0 0 2.25rem; display: flex; flex-direction: column; gap: 1rem; }
+    .pharmacy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .875rem;
+      font-size: .9rem;
+      color: rgba(255,255,255,.65);
+      line-height: 1.55;
+    }
+    .pharmacy-list li .pharm-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      flex-shrink: 0;
+      border-radius: .5rem;
+      background: rgba(var(--color-primary-rgb),.2);
+      border: 1px solid rgba(var(--color-primary-rgb),.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-lt);
+      font-size: .65rem;
+      margin-top: .1rem;
+    }
+    .pharmacy-list li strong { color: var(--color-white); font-weight: 600; }
+
+    /* ── AS SEEN IN ── */
+    .as-seen-in { background: var(--color-bg-alt); padding: 2.5rem 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+    .as-seen-label { text-align: center; font-size: .6875rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--color-fg-muted); margin-bottom: 1.5rem; }
+    .as-seen-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(1.25rem,3vw,3rem); }
+    .as-seen-logo { font-family: var(--font-heading); font-size: clamp(.875rem,1.5vw,1.125rem); font-weight: 600; color: var(--color-fg-muted); opacity: .6; transition: opacity .3s, color .3s; white-space: nowrap; }
+    .as-seen-logo:hover { opacity: 1; color: var(--color-primary); }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: .75rem; }
+    .faq-item { border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-card); }
+    .faq-question { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; font-family: var(--font-body); font-size: .9375rem; font-weight: 600; color: var(--color-fg); background: none; border: none; cursor: pointer; text-align: left; transition: color .2s; }
+    .faq-question:hover { color: var(--color-primary); }
+    .faq-icon { color: var(--color-primary); font-size: .875rem; flex-shrink: 0; transition: transform .3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .45s var(--ease-out-expo); }
+    .faq-answer p { padding: 0 1.5rem 1.5rem; font-size: .9rem; color: var(--color-fg-muted); line-height: 1.75; }
+
+    /* ── COACH SECTION ── */
+    /* ── WORKOUT SECTION ── */
+    .workout-section { background: hsl(40,20%,96%); padding: var(--section-gap) 0; }
+    .workout-header { text-align: center; max-width: 540px; margin: 0 auto 2.5rem; }
+    .workout-header .eyebrow-pill { display: inline-flex; align-items: center; gap: .5rem; background: rgba(var(--color-primary-rgb),.15); border: 1px solid rgba(var(--color-primary-rgb),.25); border-radius: var(--radius-full); padding: .35rem 1rem; font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 1.25rem; }
+    .workout-header h2 { font-family: var(--font-heading); font-size: clamp(2rem,4vw,3rem); font-weight: 700; color: var(--color-fg); line-height: 1.1; margin-bottom: 1rem; }
+    .workout-header p { font-size: .9375rem; color: var(--color-fg-muted); line-height: 1.75; margin-bottom: 1.5rem; }
+    .workout-free-badge { display: inline-flex; align-items: center; gap: .5rem; background: rgba(var(--color-primary-rgb),.12); border: 1px solid rgba(var(--color-primary-rgb),.25); border-radius: var(--radius-full); padding: .4rem 1.1rem; font-size: .7rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--color-primary-dk); }
+    .workout-programs-label { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-fg); text-align: center; margin-bottom: 1.25rem; }
+    .workout-cards { display: grid; grid-template-columns: 1fr; gap: 1rem; max-width: 680px; margin: 0 auto; }
+    .workout-card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; box-shadow: var(--shadow-sm); transition: box-shadow .2s, transform .2s; }
+    .workout-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .workout-card--half { flex-direction: column; align-items: center; text-align: center; padding: 1.75rem 1.25rem; }
+    .workout-cards-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 680px; margin: 1rem auto 0; }
+    .workout-card__icon { width: 52px; height: 52px; border-radius: var(--radius-md); background: hsl(40,20%,93%); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem; color: var(--color-fg-muted); }
+    .workout-card--half .workout-card__icon { width: 60px; height: 60px; font-size: 1.375rem; margin-bottom: .75rem; }
+    .workout-card__body { flex: 1; }
+    .workout-card__title { font-size: .9375rem; font-weight: 700; color: var(--color-fg); margin-bottom: .2rem; }
+    .workout-card__sub { font-size: .8125rem; color: var(--color-fg-muted); line-height: 1.5; }
+
+    /* ── FINAL CTA ── */
+    .final-cta { position: relative; background: var(--color-primary-dk); overflow: hidden; padding: clamp(4rem,8vw,7rem) 0; }
+    .final-cta__bg { position: absolute; inset: 0; z-index: 0; }
+    .final-cta__bg img { width: 100%; height: 100%; object-fit: cover; opacity: .18; }
+    .final-cta__glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(var(--color-primary-rgb),.25) 0%, transparent 70%); z-index: 1; pointer-events: none; }
+    .final-cta__inner { position: relative; z-index: 2; text-align: center; max-width: 680px; margin: 0 auto; }
+    .final-cta__title { font-family: var(--font-heading); font-size: clamp(2.5rem,5vw,4.5rem); font-weight: 700; color: var(--color-white); line-height: 1.05; margin-bottom: 1.25rem; letter-spacing: -.02em; }
+    .final-cta__sub { font-size: clamp(.9375rem,1.5vw,1.0625rem); color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 2.5rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .final-cta__ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2.5rem; }
+    .final-cta__trust { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; justify-content: center; }
+    .fct-item { display: flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 500; color: rgba(255,255,255,.55); }
+    .fct-item i { color: var(--color-primary-lt); font-size: .875rem; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--color-primary-dk); color: rgba(255,255,255,.7); padding: 4rem 0 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+    @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 1024px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+    .footer-brand__logo { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 700; color: var(--color-white); margin-bottom: 1rem; }
+    .footer-brand p { font-size: .875rem; line-height: 1.65; max-width: 280px; }
+    .footer-stars { margin-top: 1.25rem; font-size: .8125rem; }
+    .footer-stars span { color: #f5a623; }
+    footer h4 { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 1rem; }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: .625rem; }
+    footer ul li a { font-size: .875rem; color: rgba(255,255,255,.65); transition: color .2s; }
+    footer ul li a:hover { color: var(--color-white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+    .footer-bottom p { font-size: .75rem; color: rgba(255,255,255,.35); }
+    .footer-disclaimer { font-size: .6875rem; color: rgba(255,255,255,.25); text-align: center; margin-top: 1rem; line-height: 1.6; }
+
+    @media (max-width: 640px) { .hero__ctas .btn--lg { padding: 1rem 1.75rem; font-size: .9375rem; } }
+
+    .counter { display: inline; }
+    .data-bar-row { margin-bottom: 1.5rem; }
+    .data-bar-label { display: flex; justify-content: space-between; font-size: .875rem; font-weight: 600; margin-bottom: .5rem; }
+    .data-bar-track { height: 10px; background: var(--color-border); border-radius: var(--radius-full); overflow: hidden; }
+    .data-bar-fill { height: 100%; border-radius: var(--radius-full); background: linear-gradient(to right, var(--color-primary-dk), var(--color-primary-lt)); width: 0; transition: width 1.2s var(--ease-out-expo); }
+
+
+    .hero__bottom-cta-text strong { color: var(--color-white); font-weight: 700; }
+    .hero__bottom-cta.cta-light .hero__bottom-cta-text { color: var(--color-fg-muted); }
+    .hero__bottom-cta.cta-light .hero__bottom-cta-text strong { color: var(--color-fg); }
+    .hero__bottom-cta-btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--color-white); color: var(--color-fg); font-size: .875rem; font-weight: 700; padding: .6rem 1.375rem; border-radius: var(--radius-full); white-space: nowrap; transition: background .2s, transform .2s, color .4s ease; letter-spacing: .01em; }
+    .hero__bottom-cta-btn:hover { background: var(--color-bg); transform: translateY(-1px); }
+    .hero__bottom-cta.cta-light .hero__bottom-cta-btn { background: var(--color-primary); color: var(--color-white); }
+    .hero__bottom-cta.cta-light .hero__bottom-cta-btn:hover { background: var(--color-primary-dk); }
+    .hero__bottom-cta-arrow { transition: transform .25s var(--ease-out-expo); }
+    .hero__bottom-cta-btn:hover .hero__bottom-cta-arrow { transform: translateX(3px); }
+    @media (max-width: 600px) { .hero__bottom-cta-text { display: none; } .hero__bottom-cta-inner { padding: .625rem; } }
+
+    /* ── DOCTORS CAROUSEL ── */
+    .doctors-section { padding: var(--section-gap) 0; background: transparent; overflow: visible; }
+    .doctors-section .eyebrow { color: var(--color-primary-lt); }
+    .doctors-section .eyebrow__dot { background: var(--color-primary-lt); }
+    .doctors-carousel-outer { position: relative; margin-top: 3.5rem; }
+    /* fade edges removed */
+    .doctors-carousel-track-wrap { overflow: visible; cursor: grab; user-select: none; }
+    .doctors-carousel-track-wrap:active { cursor: grabbing; }
+    .doctors-carousel-track { display: flex; gap: 1.5rem; transition: transform .55s var(--ease-out-expo); will-change: transform; }
+    .doctor-card { flex: 0 0 300px; background: var(--color-white); border: 1px solid rgba(var(--color-primary-rgb),.2); border-radius: var(--radius-xl); overflow: hidden; position: relative; transition: border-color .35s, transform .35s var(--ease-out-expo); box-shadow: none; display: flex; flex-direction: column; }
+    .doctor-card:hover { border-color: rgba(var(--color-primary-rgb),.4); transform: translateY(-4px); box-shadow: none; }
+    .doctor-card.active { border-color: rgba(var(--color-primary-rgb),.5); box-shadow: none; }
+    .doctor-card__img-wrap { position: relative; height: 280px; overflow: hidden; background: linear-gradient(135deg, rgba(var(--color-primary-rgb),.3), rgba(var(--color-primary-rgb),.1)); }
+    .doctor-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform .5s ease; display: block; }
+    .doctor-card__img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: rgba(var(--color-primary-rgb),.4); }
+    .doctor-card__specialty-badge { position: absolute; top: .875rem; left: .875rem; background: rgba(var(--color-primary-rgb),.85); backdrop-filter: blur(6px); color: white; font-size: .6rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .75rem; border-radius: var(--radius-full); }
+    .doctor-card__body { padding: 1.5rem; flex: 1; }
+    .doctor-card__name { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #1a1a1a; margin-bottom: .25rem; }
+    .doctor-card__credentials { font-size: .75rem; font-weight: 600; color: #555555; letter-spacing: .06em; margin-bottom: .875rem; }
+    .doctor-card__bio { font-size: .8125rem; color: #333333; line-height: 1.65; margin-bottom: 1.25rem; }
+    .doctor-card__tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .doctor-card__tag { font-size: .6875rem; font-weight: 600; color: #333333; background: rgba(var(--color-primary-rgb),.08); border: 1px solid rgba(var(--color-primary-rgb),.15); padding: .25rem .625rem; border-radius: var(--radius-full); }
+    .doctor-card__footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-border); padding: .875rem 1.5rem; gap: .5rem; }
+    .doctor-card__exp { font-size: .75rem; color: #555555; }
+    .doctor-card__exp strong { color: #1a1a1a; font-weight: 700; }
+    .doctor-card__inst { display: flex; align-items: center; justify-content: flex-end; max-width: 140px; } .doctor-card__inst img { display: block; height: 32px; width: auto; max-width: 140px; object-fit: contain; filter: brightness(0) saturate(100%) invert(56%) sepia(14%) saturate(451%) hue-rotate(72deg) brightness(88%) contrast(87%); }
+    .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
+    .carousel-btn { width: 3rem; height: 3rem; border-radius: var(--radius-full); border: 1.5px solid rgba(255,255,255,.15); background: rgba(255,255,255,.06); color: rgba(255,255,255,.7); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; transition: all .25s var(--ease-out-expo); }
+    .carousel-btn:hover { border-color: rgba(var(--color-primary-rgb),.6); background: rgba(var(--color-primary-rgb),.15); color: var(--color-white); transform: scale(1.08); }
+    .carousel-btn:disabled { opacity: .3; cursor: not-allowed; transform: none; }
+    .carousel-dots { display: flex; align-items: center; gap: .5rem; }
+    .carousel-dot { width: 8px; height: 8px; border-radius: var(--radius-full); background: rgba(255,255,255,.2); cursor: pointer; transition: all .3s var(--ease-out-expo); border: none; }
+    .carousel-dot.active { width: 24px; background: var(--color-primary-lt); }
+    .carousel-progress { position: absolute; bottom: -1.5rem; left: 0; right: 0; height: 2px; background: rgba(255,255,255,.08); border-radius: var(--radius-full); overflow: hidden; }
+    .carousel-progress-bar { height: 100%; background: linear-gradient(to right, var(--color-primary-dk), var(--color-primary-lt)); border-radius: var(--radius-full); transition: width .55s var(--ease-out-expo); }
+    .doctors-drag-hint { text-align: center; margin-top: 1rem; font-size: .75rem; color: rgba(255,255,255,.3); display: flex; align-items: center; justify-content: center; gap: .5rem; }
+
+    @keyframes cta-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb),.4); } 50% { box-shadow: 0 0 0 12px rgba(var(--color-primary-rgb),0); } }
+    .btn--pulse { animation: cta-pulse 2.5s ease-in-out infinite; }
+
+    /* ─────────────────────────────────────────────
+       FORCE DARK TEXT IN DOCTOR SECTIONS
+    ───────────────────────────────────────────── */
+    /* Force dark text in doctors section */
+    .doctors-section * {
+      color: #333333 !important;
+    }
+    .doctors-section h2,
+    .doctors-section .doctor-card__name {
+      color: #1a1a1a !important;
+    }
+    .doctors-section .doctor-card__credentials,
+    .doctors-section .doctor-card__exp,
+    .doctors-section .doctor-card__state {
+      color: #555555 !important;
+    }
+    .doctors-section .doctor-card__bio,
+    .doctors-section .doctor-card__tag {
+      color: #333333 !important;
+    }
+    .doctors-section .doctor-card__exp strong {
+      color: #1a1a1a !important;
+    }
+    .doctors-section .eyebrow {
+      color: #788C75 !important;
+    }
+    .doctors-section .eyebrow__dot {
+      background: #788C75 !important;
+    }
+    .doctors-section i {
+      color: inherit !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero__bg">
+      <img src="images/hero-bg.jpg"
+           alt="Person experiencing weight loss transformation" loading="eager" fetchpriority="high" />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="container">
+      <div class="hero__content">
+
+        <!-- Trustpilot hero badge -->
+        <a href="https://www.trustpilot.com/review/precisiontelemed.com"
+           target="_blank" rel="noopener"
+           class="hero__trustpilot reveal"
+           aria-label="Precision Telemed — Excellent on Trustpilot">
+          <span class="hero__tp-excellent">Excellent</span>
+          <!-- 4 full stars + 1 partial star -->
+          <span class="hero__tp-stars" aria-label="4.7 out of 5 stars">
+            <span class="hero__tp-star"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="#788C75"/><polygon points="20,6 24.5,15.5 35,17 27.5,24 29.5,34 20,29 10.5,34 12.5,24 5,17 15.5,15.5" fill="white"/></svg></span>
+            <span class="hero__tp-star"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="#788C75"/><polygon points="20,6 24.5,15.5 35,17 27.5,24 29.5,34 20,29 10.5,34 12.5,24 5,17 15.5,15.5" fill="white"/></svg></span>
+            <span class="hero__tp-star"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="#788C75"/><polygon points="20,6 24.5,15.5 35,17 27.5,24 29.5,34 20,29 10.5,34 12.5,24 5,17 15.5,15.5" fill="white"/></svg></span>
+            <span class="hero__tp-star"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="#788C75"/><polygon points="20,6 24.5,15.5 35,17 27.5,24 29.5,34 20,29 10.5,34 12.5,24 5,17 15.5,15.5" fill="white"/></svg></span>
+            <!-- Star 5 partial (~80%) -->
+            <span class="hero__tp-star"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="rgba(255,255,255,0.2)"/><rect width="32" height="40" fill="#788C75"/><polygon points="20,6 24.5,15.5 35,17 27.5,24 29.5,34 20,29 10.5,34 12.5,24 5,17 15.5,15.5" fill="white"/></svg></span>
+          </span>
+          <span class="hero__tp-divider" aria-hidden="true"></span>
+          <span class="hero__tp-logo" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block;"><rect width="40" height="40" fill="#788C75"/><polygon points="20,6 24.5,15.5 35,17 27.5,24 29.5,34 20,29 10.5,34 12.5,24 5,17 15.5,15.5" fill="white"/></svg>
+            <span class="hero__tp-wordmark">Trustpilot</span>
+          </span>
+        </a>
+
+        <div class="hero__badge reveal">
+          <span class="hero__badge-heading">Compounded<br/>Semaglutide</span>
+        </div>
+
+        <h1 class="hero__title reveal delay-1">
+          The Program That Started It All <em>— Finally Affordable</em>
+        </h1>
+
+        <p class="hero__subtitle reveal delay-2">
+          <strong style="color:rgba(255,255,255,.9);">Start for $149 &mdash; then $199/mo.</strong> Everything included. All doses.
+        </p>
+
+        <div class="hero__ctas reveal delay-3">
+          <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--white btn--lg btn--pulse">
+            Check My Eligibility — Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+          </a>
+          <a href="#science" class="btn btn--ghost-white btn--lg">Learn the Science</a>
+        </div>
+
+      </div><!-- /hero__content -->
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <div class="social-proof-strip">
+    <div class="container">
+      <div class="social-proof-strip__inner">
+        <div class="sp-item"><i class="fas fa-star-half-stroke"></i><span><strong>4.7/5</strong> Trustpilot</span></div>
+        <div class="sp-divider"></div>
+        <div class="sp-item"><i class="fas fa-users"></i><span><strong>5,000+</strong> Patients</span></div>
+        <div class="sp-divider"></div>
+        <div class="sp-item"><i class="fas fa-user-doctor"></i><span><strong>Board-Certified</strong> Physicians</span></div>
+        <div class="sp-divider"></div>
+        <div class="sp-item"><i class="fas fa-flask"></i><span><strong>503A</strong> Licensed Pharmacy</span></div>
+        <div class="sp-divider"></div>
+        <div class="sp-item"><i class="fas fa-map-marked-alt"></i><span><strong>All 50 States</strong></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AS SEEN IN -->
+  <div class="as-seen-in">
+    <div class="container">
+      <div class="as-seen-label">As Featured In</div>
+      <div class="as-seen-logos">
+        <a href="https://markets.businessinsider.com/news/stocks/precision-telemed-announces-the-appointment-of-chris-lane-as-director-of-precision-performance-expands-holistic-wellness-programs-with-glp-1-weight-loss-treatments-1035133060" target="_blank" rel="noopener" class="as-seen-logo">Business Insider</a>
+        <a href="https://finance.yahoo.com/news/precision-telemed-announces-appointment-chris-155500205.html" target="_blank" rel="noopener" class="as-seen-logo">Yahoo Finance</a>
+        <a href="https://apnews.com/press-release/access-newswire/precision-telemed-announces-the-appointment-of-chris-lane-as-director-of-precision-performance-expands-holistic-wellness-programs-with-glp-1-weight-loss-treatments-fd803112a7ad02da83134c6908a0a191" target="_blank" rel="noopener" class="as-seen-logo">AP News</a>
+        <a href="https://www.digitaljournal.com/pr/news/access-newswire/precision-telemed-announces-appointment-chris-1159288491.html" target="_blank" rel="noopener" class="as-seen-logo">Digital Journal</a>
+        <a href="https://www.sciencetimes.com/articles/60588/20250911/precision-telemed-champions-evidence-based-wellness-transparent-glp-1-hormone-therapies.htm" target="_blank" rel="noopener" class="as-seen-logo">Science Times</a>
+        <a href="https://www.digitalfitnessworld.com/precision-telemed/" target="_blank" rel="noopener" class="as-seen-logo">Digital Fitness World</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div style="text-align:center; max-width:620px; margin:0 auto 3rem;">
+        <div class="eyebrow reveal"><span class="eyebrow__dot"></span> Transparent Pricing</div>
+        <h2 class="heading-lg reveal delay-1" style="margin-top:.75rem;">One Simple Price.<br/>Every Dose Covered.</h2>
+        <p class="text-muted reveal delay-2" style="margin-top:1rem; line-height:1.7;">
+          Start for <strong>$149 your first month</strong>, then $199/mo — covers all dose levels from 0.25 mg to 2.5 mg. No price hikes as you progress. No surprises. No lock-in.
+        </p>
+      </div>
+      <div class="pricing-grid">
+
+        <!-- CARD 1: Starter -->
+        <div class="pricing-card pricing-card--maintenance reveal">
+          <div class="pricing-card__dose">Maintenance Program</div>
+          <div class="pricing-card__title">Semaglutide</div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-amount">$149</span>
+            <span class="pricing-card__price-per">/first mo</span>
+          </div>
+          <div style="font-size:.8rem; color:var(--color-fg-muted); margin-top:-.75rem; margin-bottom:1.25rem; font-weight:500;">then $199/mo &mdash; cancel anytime</div>
+          <ul class="pricing-card__features">
+            <li><i class="fas fa-check-circle"></i> Lowest dose only (0.25 mg)</li>
+            <li><i class="fas fa-check-circle"></i> Monthly vial supply</li>
+            <li><i class="fas fa-check-circle"></i> Board-certified physician</li>
+            <li><i class="fas fa-check-circle"></i> Free expedited shipping</li>
+            <li><i class="fas fa-check-circle"></i> Free workout plan</li>
+            <li><i class="fas fa-check-circle"></i> No subscription required</li>
+          </ul>
+          <a href="https://precisiontelemed.com/start-weight-loss-program-microdose-semaglutide/" target="_blank" rel="noopener" class="btn btn--outline" style="width:100%">
+            Check My Eligibility &mdash; Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+          </a>
+        </div>
+
+        <!-- CARD 2: Standard -->
+        <div class="pricing-card pricing-card--featured reveal delay-2">
+          <div class="pricing-card__badge">&star; Most Popular</div>
+          <div class="pricing-card__dose">Standard Program</div>
+          <div class="pricing-card__title">Semaglutide</div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-amount">$149</span>
+            <span class="pricing-card__price-per">/first mo</span>
+          </div>
+          <div style="font-size:.8rem; color:var(--color-fg-muted); margin-top:-.75rem; margin-bottom:1.25rem; font-weight:500;">then $199/mo &mdash; cancel anytime</div>
+          <ul class="pricing-card__features">
+            <li><i class="fas fa-check-circle"></i> 0.25 mg &ndash; 2.5 mg dosing</li>
+            <li><i class="fas fa-check-circle"></i> Monthly vial supply</li>
+            <li><i class="fas fa-check-circle"></i> Board-certified physician</li>
+            <li><i class="fas fa-check-circle"></i> Free expedited shipping</li>
+            <li><i class="fas fa-check-circle"></i> Free workout plan</li>
+            <li><i class="fas fa-check-circle"></i> All doses included (0.25mg–2.5mg)</li>
+            <li><i class="fas fa-check-circle"></i> HIPAA compliant platform</li>
+          </ul>
+          <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--primary" style="width:100%">
+            Check My Eligibility &mdash; Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+          </a>
+        </div>
+
+        <!-- CARD 3: Advanced -->
+        <div class="pricing-card pricing-card--advanced reveal delay-3">
+          <div class="pricing-card__badge">&starf; Advanced</div>
+          <div class="pricing-card__dose">Advanced Program</div>
+          <div class="pricing-card__title">Semaglutide<span style="color:var(--color-primary);">+</span></div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-amount">$174.99</span>
+            <span class="pricing-card__price-per">/first mo</span>
+          </div>
+          <div style="font-size:.8rem; color:var(--color-fg-muted); margin-top:-.75rem; margin-bottom:1.25rem; font-weight:500;">then $224.99/mo &mdash; cancel anytime</div>
+          <a href="https://monj.com/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:.6rem; background:rgba(var(--color-primary-rgb),.08); border:1px solid rgba(var(--color-primary-rgb),.2); border-radius:var(--radius-lg); padding:.5rem .875rem; margin-bottom:1.25rem; text-decoration:none; transition:background .2s;" onmouseover="this.style.background='rgba(var(--color-primary-rgb),.15)'" onmouseout="this.style.background='rgba(var(--color-primary-rgb),.08)'">
+            <img src="images/monj-logo.png" alt="Monj Health" style="width:28px; height:28px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+            <span style="font-size:.75rem; font-weight:700; color:var(--color-primary-dk); letter-spacing:.02em;">Includes Monj Health Access</span>
+          </a>
+          <ul class="pricing-card__features">
+            <li><i class="fas fa-check-circle"></i> 0.25 mg &ndash; 2.5 mg dosing</li>
+            <li><i class="fas fa-check-circle"></i> Monthly vial supply</li>
+            <li><i class="fas fa-check-circle"></i> Board-certified physician</li>
+            <li><i class="fas fa-check-circle"></i> Monthly <a href="https://monj.com/" target="_blank" rel="noopener" style="color:var(--color-primary-dk); font-weight:700; text-decoration:underline;">Monj Health</a> membership</li>
+            <li><i class="fas fa-check-circle"></i> Personalized meal &amp; lifestyle coaching</li>
+          </ul>
+          <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--primary" style="width:100%">
+            Check My Eligibility &mdash; Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+          </a>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:2rem;" class="reveal">
+        <p style="font-size:.9rem; color:var(--color-fg-muted);">
+          <i class="fas fa-shield-halved" style="color:var(--color-primary); margin-right:.35rem;"></i>
+          $149 first month, $199/mo after &mdash; same price at every dose, cancel anytime.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS CAROUSEL -->
+  <section class="doctors-section" aria-labelledby="doctors-heading">
+    <div class="container">
+      <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:1.5rem; margin-bottom:.5rem;">
+        <div>
+          <div class="eyebrow reveal"><span class="eyebrow__dot"></span> Our Physicians</div>
+          <h2 id="doctors-heading" class="heading-lg reveal delay-1" style="margin-top:.75rem; color:var(--color-white);">
+            Board-Certified Doctors,<br/><em style="font-weight:400; color:rgba(255,255,255,.55); font-style:italic;">Dedicated to Your Results</em>
+          </h2>
+        </div>
+        <p class="reveal delay-2" style="max-width:380px; font-size:.9375rem; color:rgba(255,255,255,.55); line-height:1.7;">
+          Every patient is matched with a licensed physician specializing in metabolic health and GLP-1 therapy — not a one-size-fits-all algorithm.
+        </p>
+      </div>
+    </div>
+    <div class="container" style="position:relative;">
+      <div class="doctors-carousel-outer">
+        <div class="doctors-carousel-track-wrap" id="doc-track-wrap">
+          <div class="doctors-carousel-track" id="doc-track">
+            <div class="doctor-card active" data-index="0">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/dr-palumbo.jpg" alt="Dr. Joseph Palumbo, DO" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Medical Director</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Dr. Joseph Palumbo, DO</div>
+                <div class="doctor-card__credentials">Medical Director · Osteopathic Medicine</div>
+                <div class="doctor-card__bio">Medical Director at Precision Telemed. Trained at Lake Erie College of Osteopathic Medicine, Dr. Palumbo leads clinical oversight across all GLP-1 weight loss programs.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Medical Director</span><span class="doctor-card__tag">GLP-1</span><span class="doctor-card__tag">Weight Loss</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1043478878</strong></div><span class="doctor-card__inst"><img src="images/logos/lecom.svg" alt="Lake Erie College of Osteopathic Medicine"></span></div>
+            </div>
+            <div class="doctor-card" data-index="1">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/angela-kifer-thomas.jpg" alt="Angela Kifer-Thomas, APRN, ACNPC-AG" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Acute Care</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Angela Kifer-Thomas, APRN, ACNPC-AG</div>
+                <div class="doctor-card__credentials">Acute Care · University of Texas Medical Branch</div>
+                <div class="doctor-card__bio">Advanced Practice RN specializing in acute care, trained at UTMB Galveston. Delivers high-acuity, responsive patient management for weight loss programs.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Acute Care</span><span class="doctor-card__tag">Advanced Practice</span><span class="doctor-card__tag">Patient Care</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1578278487</strong></div><span class="doctor-card__inst"><img src="images/logos/utmb-health.svg" alt="University of Texas Medical Branch"></span></div>
+            </div>
+            <div class="doctor-card" data-index="2">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/dr-patel.jpg" alt="Dr. Kartik Patel, MD, MBA" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Internal Medicine</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Dr. Kartik Patel, MD, MBA</div>
+                <div class="doctor-card__credentials">Internal Medicine · University of Colorado</div>
+                <div class="doctor-card__bio">Board-certified internist with advanced training at the University of Colorado at Denver. Specializes in GLP-1 therapy and metabolic health optimization.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Internal Medicine</span><span class="doctor-card__tag">Metabolic Health</span><span class="doctor-card__tag">GLP-1</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1588786465</strong></div><span class="doctor-card__inst"><img src="images/logos/cu-colorado.svg" alt="University of Colorado"></span></div>
+            </div>
+            <div class="doctor-card" data-index="3">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/dr-colon-molero.jpg" alt="Angel L. Colón-Molero, MD, MBA, MPH" style="width:100%;height:100%;object-position:center 30%;" /><div class="doctor-card__specialty-badge">Internal Medicine</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Angel L. Colón-Molero, MD, MBA, MPH</div>
+                <div class="doctor-card__credentials">Internal Medicine · Veterans Health Administration</div>
+                <div class="doctor-card__bio">Internist with extensive experience through the Veterans Health Administration and Ponce School of Medicine. Patient-first approach to metabolic and weight care.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Internal Medicine</span><span class="doctor-card__tag">Veterans Health</span><span class="doctor-card__tag">Semaglutide</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1063415727</strong></div><span class="doctor-card__inst"><img src="images/logos/ponce.svg" alt="Ponce Health Sciences University"></span></div>
+            </div>
+            <div class="doctor-card" data-index="4">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/samuel-palmer.jpg" alt="Samuel Palmer, APRN" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Adult &amp; Geriatric Care</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Samuel Palmer, APRN</div>
+                <div class="doctor-card__credentials">Adult &amp; Geriatric Care · Vanderbilt University</div>
+                <div class="doctor-card__bio">Advanced Practice RN trained at Vanderbilt University. Brings decades of adult and geriatric clinical experience to telehealth-based weight management programs.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Geriatric Care</span><span class="doctor-card__tag">Adult Medicine</span><span class="doctor-card__tag">Telehealth</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1689014862</strong></div><span class="doctor-card__inst"><img src="images/logos/vanderbilt.svg" alt="Vanderbilt University"></span></div>
+            </div>
+            <div class="doctor-card" data-index="5">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/dr-akler.jpg" alt="Dr. Gidon Akler, MD" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Emergency Medicine</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Dr. Gidon Akler, MD</div>
+                <div class="doctor-card__credentials">Emergency Medicine · Mount Sinai Hospital NY</div>
+                <div class="doctor-card__bio">Emergency physician trained at Tel Aviv University Medical School with residency at Mount Sinai NY. Expert in rapid clinical assessment and acute metabolic care.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Emergency Med</span><span class="doctor-card__tag">Acute Care</span><span class="doctor-card__tag">Metabolic</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1770978181</strong></div><span class="doctor-card__inst"><img src="images/logos/tel-aviv.svg" alt="Tel Aviv University"></span></div>
+            </div>
+            <div class="doctor-card" data-index="6">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/brett-whaley.jpg" alt="Brett Whaley, ACNP-BC" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Critical Care</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Brett Whaley, ACNP-BC</div>
+                <div class="doctor-card__credentials">Critical Care · Texas Tech University School of Nursing</div>
+                <div class="doctor-card__bio">Board-certified Acute Care NP from Texas Tech University. Specializes in critical and complex metabolic conditions with a focus on comprehensive patient outcomes.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Critical Care</span><span class="doctor-card__tag">ACNP</span><span class="doctor-card__tag">Metabolic</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1164797643</strong></div><span class="doctor-card__inst"><img src="images/logos/texas-tech.svg" alt="Texas Tech University"></span></div>
+            </div>
+            <div class="doctor-card" data-index="7">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/michael-gype.jpg" alt="Michael Gype, PA-C" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">General Practice</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Michael Gype, PA-C</div>
+                <div class="doctor-card__credentials">General Practice · Cleveland State University</div>
+                <div class="doctor-card__bio">Certified Physician Assistant from Cleveland State University. Provides accessible, personalized weight management care with a broad general practice background.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">General Practice</span><span class="doctor-card__tag">PA-C</span><span class="doctor-card__tag">Weight Management</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1952760977</strong></div><span class="doctor-card__inst"><img src="images/logos/cleveland-state.svg" alt="Cleveland State University"></span></div>
+            </div>
+            <div class="doctor-card" data-index="8">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/dr-chandler.jpg" alt="Dr. Robert Chandler, DO" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Emergency Medicine</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Dr. Robert Chandler, DO</div>
+                <div class="doctor-card__credentials">Emergency Medicine · Lake Erie College of Osteopathic Medicine</div>
+                <div class="doctor-card__bio">Osteopathic emergency medicine physician applying a whole-body clinical lens to GLP-1 therapy and metabolic health management.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Emergency Med</span><span class="doctor-card__tag">Osteopathic</span><span class="doctor-card__tag">GLP-1</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1922244664</strong></div><span class="doctor-card__inst"><img src="images/logos/lecom.svg" alt="Lake Erie College of Osteopathic Medicine"></span></div>
+            </div>
+            <div class="doctor-card" data-index="9">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/brittany-umana.jpg" alt="Brittany Umana, DNP, ARNP, FNP-C" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Family Nurse Practitioner</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Brittany Umana, DNP, ARNP, FNP-C</div>
+                <div class="doctor-card__credentials">Family NP · Maryville University (DNP)</div>
+                <div class="doctor-card__bio">DNP-prepared Family Nurse Practitioner trained at Maryville University and Washburn University. Delivers holistic, primary-focused care for weight management patients.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Family Medicine</span><span class="doctor-card__tag">DNP</span><span class="doctor-card__tag">Primary Care</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1366175051</strong></div><span class="doctor-card__inst"><img src="images/logos/maryville.svg" alt="Maryville University"></span></div>
+            </div>
+            <div class="doctor-card" data-index="10">
+              <div class="doctor-card__img-wrap"><img src="images/doctors/dr-ahmed.jpg" alt="Dr. Azhar Ahmed, MD" style="width:100%;height:100%;" /><div class="doctor-card__specialty-badge">Emergency Medicine</div></div>
+              <div class="doctor-card__body">
+                <div class="doctor-card__name">Dr. Azhar Ahmed, MD</div>
+                <div class="doctor-card__credentials">Emergency Medicine · University of Kentucky</div>
+                <div class="doctor-card__bio">Emergency medicine physician from the University of Kentucky bringing high-level diagnostic precision and clinical expertise to metabolic health programs.</div>
+                <div class="doctor-card__tags"><span class="doctor-card__tag">Emergency Med</span><span class="doctor-card__tag">Diagnostics</span><span class="doctor-card__tag">Wellness</span></div>
+              </div>
+              <div class="doctor-card__footer"><div class="doctor-card__exp">NPI# <strong>1164958351</strong></div><span class="doctor-card__inst"><img src="images/logos/kentucky.svg" alt="University of Kentucky"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-progress"><div class="carousel-progress-bar" id="doc-progress-bar" style="width:14%;"></div></div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="doc-prev" aria-label="Previous doctor"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-dots" id="doc-dots" role="tablist" aria-label="Doctor pagination"></div>
+        <button class="carousel-btn" id="doc-next" aria-label="Next doctor"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="doctors-drag-hint" aria-hidden="true"><i class="fas fa-hand-pointer"></i> Drag or swipe to explore</div>
+    </div>
+  </section>
+
+  <!-- BEFORE & AFTER RESULTS -->
+  <section class="section before-after-section" style="background:var(--color-bg-alt); padding:1rem 0 clamp(1.5rem,3vw,2.5rem);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:1.25rem;">
+        <div class="eyebrow reveal"><span class="eyebrow__dot"></span> Real Patient Results</div>
+        <h2 class="heading-md reveal delay-1" style="margin-top:.75rem;">See What's Possible</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:760px; margin:0 auto;">
+        <div class="benefits-visual__photo reveal reveal--left">
+          <img src="images/patient-result-1.jpg" alt="Patient transformation result — significant weight loss with Semaglutide" />
+          <span class="benefits-visual__label">Real Patient Result</span>
+        </div>
+        <div class="benefits-visual__photo reveal reveal--right delay-1">
+          <img src="images/patient-result-2.jpg" alt="Patient transformation result — body composition change with Semaglutide" />
+          <span class="benefits-visual__label">Real Patient Result</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKOUT SECTION -->
+  <section class="workout-section" aria-labelledby="workout-heading">
+    <div class="container">
+
+      <!-- Centered header -->
+      <div class="workout-header reveal">
+        <div class="eyebrow-pill">🏋️ Holistic Approach</div>
+        <h2 id="workout-heading">More Than<br/>Medication</h2>
+        <p>Our holistic approach includes a free customized workout tailored to your goals — because true wellness goes beyond a prescription.</p>
+        <div class="workout-free-badge">🎁 &nbsp;Free With Every Program</div>
+      </div>
+
+      <!-- Program cards -->
+      <div class="workout-programs-label reveal delay-1">Receive Your Program After Checkout</div>
+
+      <!-- Top card: full width -->
+      <div class="workout-cards reveal delay-2">
+        <div class="workout-card">
+          <div class="workout-card__icon"><i class="fas fa-dumbbell"></i></div>
+          <div class="workout-card__body">
+            <div class="workout-card__title">Weight Loss &amp; Strength Training</div>
+            <div class="workout-card__sub">Full gym equipment &middot; Burn fat &amp; build muscle simultaneously</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row: two half cards -->
+      <div class="workout-cards-bottom reveal delay-3">
+        <div class="workout-card workout-card--half">
+          <div class="workout-card__icon"><i class="fas fa-house"></i></div>
+          <div class="workout-card__title">Home Workout</div>
+          <div class="workout-card__sub">Cardio + no equipment</div>
+        </div>
+        <div class="workout-card workout-card--half">
+          <div class="workout-card__icon"><i class="fas fa-person-walking"></i></div>
+          <div class="workout-card__title">Functional Mobility Training</div>
+          <div class="workout-card__sub">Mobility &amp; stability &middot; Corrective Exercises &amp; fixing imbalances</div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:2rem;" class="reveal delay-4">
+        <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          Check My Eligibility — Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal"><div class="stat-item__num"><span class="counter" data-target="15">0</span>%</div><div class="stat-item__label">Avg. Body Weight Lost</div></div>
+        <div class="stat-item reveal delay-1"><div class="stat-item__num"><span class="counter" data-target="70">0</span>%</div><div class="stat-item__label">Lost ≥ 10% Body Weight</div></div>
+        <div class="stat-item reveal delay-2"><div class="stat-item__num"><span class="counter" data-target="5000">0</span>+</div><div class="stat-item__label">Patients Treated</div></div>
+        <div class="stat-item reveal delay-3"><div class="stat-item__num">4.7<span style="font-size:2rem;">★</span></div><div class="stat-item__label">Trustpilot Rating</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALCULATOR -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="calculator-wrapper">
+        <div class="calculator-info">
+          <div class="eyebrow reveal"><span class="eyebrow__dot"></span> See Your Potential</div>
+          <h2 class="reveal delay-1" style="font-family:var(--font-heading); font-size:clamp(1.75rem,3.5vw,2.75rem); font-weight:700; line-height:1.1; margin-top:.75rem; margin-bottom:1rem;">
+            How Much Could<br/>You Lose?
+          </h2>
+          <p class="text-muted reveal delay-2" style="font-size:.9rem; line-height:1.7; margin-bottom:1.25rem;">
+            Patients on Semaglutide lost an average of 14.9% of their body weight over 68 weeks in the STEP 1 clinical trial. Enter your weight below to see your potential.
+          </p>
+          <p class="reveal delay-3" style="font-size:.75rem; color:var(--color-fg-muted); line-height:1.6;">
+            Based on Wilding et al., <em>N Engl J Med</em>, 2021. Individual results vary.
+          </p>
+        </div>
+        <div class="calculator-card reveal delay-2">
+          <div class="calc-label">
+            <span>Your Current Weight</span>
+            <strong id="weight-display">250 lbs</strong>
+          </div>
+          <input type="range" class="calc-slider" id="weight-slider" min="150" max="400" value="250" step="1" aria-label="Current weight in pounds" />
+          <div style="display:flex; justify-content:space-between; font-size:.75rem; color:var(--color-fg-muted); margin-top:-.75rem; margin-bottom:1.5rem;"><span>150 lbs</span><span>400 lbs</span></div>
+          <div class="calc-label" style="margin-top:1rem;">
+            <span>Expected Loss (%)</span>
+            <strong id="pct-display">15%</strong>
+          </div>
+          <input type="range" class="calc-slider" id="pct-slider" min="5" max="15" value="15" step=".5" aria-label="Expected percentage weight loss" />
+          <div style="display:flex; justify-content:space-between; font-size:.75rem; color:var(--color-fg-muted); margin-top:-.75rem; margin-bottom:0;"><span>Conservative</span><span>Max (Trial Data)</span></div>
+          <div class="calc-result">
+            <div class="calc-result__label">Estimated Weight Loss</div>
+            <div>
+              <span class="calc-result__value" id="calc-loss">38</span>
+              <span class="calc-result__unit"> lbs</span>
+            </div>
+            <div style="margin-top:.75rem; font-size:.875rem; color:var(--color-fg-muted);">
+              Potential goal weight: <strong id="calc-goal" style="color:var(--color-primary);">212 lbs</strong>
+            </div>
+            <div class="calc-result__disclaimer">*Estimates based on clinical trial data. Individual results vary based on adherence, diet, exercise, and metabolic factors.</div>
+            <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--primary" style="width:100%; margin-top:1.5rem;">
+              Check My Eligibility — Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SCIENCE -->
+  <section class="section" id="science">
+    <div class="container">
+      <div class="science-grid">
+        <div class="science-visual reveal reveal--left">
+          <div class="science-chart-wrap">
+            <div class="science-chart-title">Body Weight Change from Baseline (%)</div>
+            <div class="science-chart-legend">
+              <div class="science-chart-legend-item"><div class="science-chart-legend-dot" style="background:#788C75;"></div> Semaglutide 2.4 mg</div>
+              <div class="science-chart-legend-item"><div class="science-chart-legend-dot" style="background:rgba(255,255,255,.35);"></div> Placebo</div>
+            </div>
+            <div class="science-chart-canvas-wrap">
+              <canvas id="sema-science-chart"></canvas>
+            </div>
+          </div>
+          <div class="science-visual__badge">
+            <div class="science-visual__badge-title">−14.9% Avg. Body Weight Lost</div>
+            <div class="science-visual__badge-sub">STEP 1 Phase 3 Clinical Trial · 68 Weeks · Wilding et al., NEJM 2021</div>
+          </div>
+        </div>
+        <div class="science-copy">
+          <div class="eyebrow reveal"><span class="eyebrow__dot"></span> The Science</div>
+          <h2 class="heading-md reveal delay-1" style="margin-top:.5rem; margin-bottom:.75rem; font-size:clamp(1.6rem,2.8vw,2.5rem);">
+            The Pioneer That<br />Proved GLP-1 Works.
+          </h2>
+          <p class="text-muted reveal delay-2" style="font-size:.875rem; line-height:1.65; margin-bottom:1rem;">
+            Semaglutide was the drug that changed everything. As the first GLP-1 receptor agonist to demonstrate landmark weight loss results in Phase 3 clinical trials, it proved that the body's own satiety signals could be harnessed to produce sustained, meaningful fat loss — and became the gold standard that all subsequent therapies are still measured against.
+          </p>
+          <div class="reveal delay-3" style="margin-bottom:1rem;">
+            <div class="data-bar-row" style="margin-bottom:.75rem;">
+              <div class="data-bar-label" style="font-size:.8125rem;"><span>Avg. Body Weight Lost (STEP 1 Trial)</span><span>14.9%</span></div>
+              <div class="data-bar-track"><div class="data-bar-fill" data-width="65"></div></div>
+            </div>
+            <div class="data-bar-row" style="margin-bottom:.75rem;">
+              <div class="data-bar-label" style="font-size:.8125rem;"><span>Patients Lost ≥ 10% Body Weight</span><span>70%</span></div>
+              <div class="data-bar-track"><div class="data-bar-fill" data-width="70"></div></div>
+            </div>
+            <div class="data-bar-row" style="margin-bottom:0;">
+              <div class="data-bar-label" style="font-size:.8125rem;"><span>Reduction in Waist Circumference</span><span>13.5 cm avg</span></div>
+              <div class="data-bar-track"><div class="data-bar-fill" data-width="55"></div></div>
+            </div>
+          </div>
+          <div class="mechanism-cards reveal delay-4" style="margin-top:auto; padding-top:.75rem;">
+            <div class="mechanism-card">
+              <div class="mechanism-card__icon"><i class="fas fa-dna"></i></div>
+              <h4>GLP-1 Receptor</h4>
+              <p>Mimics the body's natural satiety hormone to reduce appetite signals and slow gastric emptying.</p>
+            </div>
+            <div class="mechanism-card">
+              <div class="mechanism-card__icon"><i class="fas fa-fire-flame-curved"></i></div>
+              <h4>Blood Sugar Control</h4>
+              <p>Improves insulin sensitivity and lowers fasting glucose for lasting metabolic balance.</p>
+            </div>
+            <div class="mechanism-card">
+              <div class="mechanism-card__icon"><i class="fas fa-heart-pulse"></i></div>
+              <h4>Cardiovascular Benefits</h4>
+              <p>SELECT trial: 20% reduction in major cardiovascular events in at-risk patients.</p>
+            </div>
+            <div class="mechanism-card">
+              <div class="mechanism-card__icon"><i class="fas fa-shield-halved"></i></div>
+              <h4>Compounded Quality</h4>
+              <p>503A licensed pharmacy. Human-grade. Physician-formulated. Never research-grade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section--alt">
+    <div class="container">
+      <div style="text-align:center; max-width:620px; margin:0 auto 4rem;">
+        <div class="eyebrow reveal"><span class="eyebrow__dot"></span> Real Results</div>
+        <h2 class="heading-lg reveal delay-1" style="margin-top:.75rem;">Thousands Have<br/>Already Transformed</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">I watched Semaglutide get all the buzz but could never afford brand-name pricing. Precision Telemed made it actually accessible — same medication, real doctor, and I'm down 34 lbs in 5 months.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JP</div>
+            <div><div class="testimonial-author-name">Jennifer P.</div><div class="testimonial-author-sub">Verified Patient · Lost 34 lbs</div></div>
+            <div style="margin-left:auto;"><span class="testimonial-loss-badge"><i class="fas fa-arrow-trend-down"></i> −34 lbs</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-1">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">The same-day consultation was unreal. Qualified in the morning, doctor called by noon. Three weeks in and already down 11 lbs. The process was completely seamless — this program is the real deal.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div><div class="testimonial-author-name">Marcus R.</div><div class="testimonial-author-sub">Verified Patient · Lost 41 lbs</div></div>
+            <div style="margin-left:auto;"><span class="testimonial-loss-badge"><i class="fas fa-arrow-trend-down"></i> −41 lbs</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-2">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Was spending $1,000+ a month brand-name. Switching to Precision's compounded Semaglutide saved me so much money and the results are identical. Started at $149 — I wish I'd found this sooner.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CW</div>
+            <div><div class="testimonial-author-name">Christine W.</div><div class="testimonial-author-sub">Verified Patient · Lost 28 lbs</div></div>
+            <div style="margin-left:auto;"><span class="testimonial-loss-badge"><i class="fas fa-arrow-trend-down"></i> −28 lbs</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-3">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Honestly shocked at how personalized everything was. My doctor reviewed my full history, adjusted my titration schedule, and checked in throughout. Down 39 lbs and still going strong.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AL</div>
+            <div><div class="testimonial-author-name">Angela L.</div><div class="testimonial-author-sub">Verified Patient · Lost 39 lbs</div></div>
+            <div style="margin-left:auto;"><span class="testimonial-loss-badge"><i class="fas fa-arrow-trend-down"></i> −39 lbs</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-4">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">Never thought telehealth could feel this personal. No waiting rooms, no commute, just a real board-certified physician who genuinely cares. I'm down 46 lbs in 7 months. Life-changing.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DK</div>
+            <div><div class="testimonial-author-name">David K.</div><div class="testimonial-author-sub">Verified Patient · Lost 46 lbs</div></div>
+            <div style="margin-left:auto;"><span class="testimonial-loss-badge"><i class="fas fa-arrow-trend-down"></i> −46 lbs</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-5">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-quote">The free workout plan combined with Semaglutide completely transformed my relationship with food. 31 lbs gone, energy levels through the roof. I'm a totally different person.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SN</div>
+            <div><div class="testimonial-author-name">Sarah N.</div><div class="testimonial-author-sub">Verified Patient · Lost 31 lbs</div></div>
+            <div style="margin-left:auto;"><span class="testimonial-loss-badge"><i class="fas fa-arrow-trend-down"></i> −31 lbs</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHARMACY SECTION -->
+  <section class="pharmacy-section">
+    <div class="container">
+      <div class="pharmacy-grid">
+
+        <!-- Themed logo card -->
+        <div class="pharmacy-logo-card reveal reveal--left">
+          <!-- Greenwich pharmacy logo photo -->
+          <div class="pharmacy-logo-mark">
+            <img src="images/pharmacy-greenwich.jpg" alt="Greenwich Compounding Pharmacy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-lg);" />
+          </div>
+
+          <div class="pharmacy-logo-name">
+            Greenwich
+            <span>Compounding Pharmacy Partner</span>
+          </div>
+
+          <div class="pharmacy-logo-divider"></div>
+
+          <div class="pharmacy-badge-row">
+            <span class="pharmacy-badge"><i class="fas fa-circle-check"></i> 503A Licensed</span>
+            <span class="pharmacy-badge"><i class="fas fa-circle-check"></i> PCAB Accredited</span>
+            <span class="pharmacy-badge"><i class="fas fa-circle-check"></i> FDA Registered</span>
+            <span class="pharmacy-badge"><i class="fas fa-circle-check"></i> HIPAA Compliant</span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="pharmacy-content">
+          <div class="eyebrow eyebrow--light reveal"><span class="eyebrow__dot"></span> Our Pharmacy Partner</div>
+          <h2 class="reveal delay-1">
+            Distributed by<br /><em>the Best in the Business.</em>
+          </h2>
+          <p class="reveal delay-2">
+            Every vial of Semaglutide dispensed through Precision Telemed is distributed exclusively by PerfectRx — a 503A licensed, PCAB-accredited compounding pharmacy held to the highest standards of quality, safety, and purity.
+          </p>
+          <ul class="pharmacy-list reveal delay-3">
+            <li>
+              <span class="pharm-icon"><i class="fas fa-flask"></i></span>
+              <div><strong>503A Licensed Compounding Pharmacy</strong> — fully compliant with all state and federal regulations</div>
+            </li>
+            <li>
+              <span class="pharm-icon"><i class="fas fa-vial-circle-check"></i></span>
+              <div><strong>Human-Grade Semaglutide Only</strong> — never research-grade or peptide-grade alternatives</div>
+            </li>
+            <li>
+              <span class="pharm-icon"><i class="fas fa-microscope"></i></span>
+              <div><strong>Rigorous Quality Testing</strong> — every batch tested for potency, sterility, and purity</div>
+            </li>
+            <li>
+              <span class="pharm-icon"><i class="fas fa-temperature-low"></i></span>
+              <div><strong>Cold-Chain Shipping</strong> — temperature-controlled delivery to preserve efficacy</div>
+            </li>
+          </ul>
+          <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--white reveal delay-4">
+            Check My Eligibility — Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS / WHY PRECISION TELEMED -->
+  <section class="section section--alt why-section">
+    <div class="container">
+      <div style="text-align:center; max-width:600px; margin:0 auto 3rem;">
+        <div class="eyebrow reveal" style="margin-bottom:.5rem; justify-content:center;"><span class="eyebrow__dot"></span> Why Precision Telemed</div>
+        <h2 class="heading-lg reveal delay-1" style="margin-top:.75rem;">
+          Everything You Need.<br /><em>Nothing You Don't.</em>
+        </h2>
+        <p class="text-muted reveal delay-2" style="margin-top:.875rem; line-height:1.7;">We built Precision Telemed to remove every friction point between you and lasting results.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-card__icon"><i class="fas fa-user-doctor"></i></div>
+          <h3 class="why-card__title">Same-Day Physician Consult</h3>
+          <p class="why-card__desc">Meet a board-certified doctor via telehealth — often the same day you sign up. No waiting rooms, no referrals.</p>
+        </div>
+        <div class="why-card reveal delay-1">
+          <div class="why-card__icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3 class="why-card__title">Flat, Transparent Pricing</h3>
+          <p class="why-card__desc">$149 your first month, then $199/mo — covers every dose level from 0.25 mg to 2.5 mg. No price hikes as you dose up, no hidden fees.</p>
+        </div>
+        <div class="why-card reveal delay-2">
+          <div class="why-card__icon"><i class="fas fa-flask"></i></div>
+          <h3 class="why-card__title">503A Licensed Pharmacy</h3>
+          <p class="why-card__desc">Your medication is compounded by PerfectRx, a PCAB-accredited, FDA-registered facility. Human-grade only.</p>
+        </div>
+        <div class="why-card reveal delay-3">
+          <div class="why-card__icon"><i class="fas fa-truck-fast"></i></div>
+          <h3 class="why-card__title">Fast, Discreet Shipping</h3>
+          <p class="why-card__desc">Ships in 3–5 business days in plain, unmarked packaging to your door — anywhere in the US.</p>
+        </div>
+        <div class="why-card reveal delay-4">
+          <div class="why-card__icon"><i class="fas fa-dumbbell"></i></div>
+          <h3 class="why-card__title">Free Workout Plan</h3>
+          <p class="why-card__desc">Every patient gets a custom workout program — tailored to your goals and included free with every program.</p>
+        </div>
+        <div class="why-card reveal delay-5">
+          <div class="why-card__icon"><i class="fas fa-rotate-left"></i></div>
+          <h3 class="why-card__title">No Lock-In, Ever</h3>
+          <p class="why-card__desc">Month-to-month only. Pause or cancel anytime — no penalties, no hoops to jump through.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div style="text-align:center; max-width:620px; margin:0 auto 4rem;">
+        <div class="eyebrow reveal"><span class="eyebrow__dot"></span> Simple Process</div>
+        <h2 class="heading-lg reveal delay-1" style="margin-top:.75rem;">
+          From Sign-Up to<br/>First Injection in Days
+        </h2>
+        <p class="text-muted reveal delay-2" style="margin-top:1rem;">
+          We've built the fastest, most streamlined path to getting started with Semaglutide therapy.
+        </p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-card__num">01</div>
+          <div class="step-card__time"><i class="fas fa-clock"></i> Takes 5 min</div>
+          <div class="step-card__icon-wrap"><i class="fas fa-clipboard-list"></i></div>
+          <h3>Complete Your Assessment</h3>
+          <p>Answer a brief online health questionnaire in under 5 minutes. No office visit required. We'll review your eligibility instantly.</p>
+        </div>
+        <div class="step-card reveal delay-2">
+          <div class="step-card__num">02</div>
+          <div class="step-card__time"><i class="fas fa-clock"></i> Often same day</div>
+          <div class="step-card__icon-wrap"><i class="fas fa-video"></i></div>
+          <h3>Consult a Board-Certified Doctor</h3>
+          <p>Meet your physician via secure telehealth — often same day. They'll review your goals and craft your personalized dosing plan.</p>
+        </div>
+        <div class="step-card reveal delay-4">
+          <div class="step-card__num">03</div>
+          <div class="step-card__time"><i class="fas fa-clock"></i> 3–5 days to your door</div>
+          <div class="step-card__icon-wrap"><i class="fas fa-box-open"></i></div>
+          <h3>Receive &amp; Begin Treatment</h3>
+          <p>Your compounded Semaglutide ships directly from a licensed 503A pharmacy in discreet packaging, ready for weekly self-injection.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem;" class="reveal">
+        <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          Check My Eligibility — Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div style="text-align:center; max-width:620px; margin:0 auto 4rem;">
+        <div class="eyebrow reveal"><span class="eyebrow__dot"></span> Common Questions</div>
+        <h2 class="heading-lg reveal delay-1" style="margin-top:.75rem;">Everything You Need to Know</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">What is Semaglutide and how does it work for weight loss?<span class="faq-icon"><i class="fas fa-plus"></i></span></button>
+          <div class="faq-answer"><p>Semaglutide is a GLP-1 receptor agonist — the first of its class to demonstrate significant weight loss results in landmark clinical trials. It works by mimicking GLP-1, your body's natural "fullness" hormone. This slows gastric emptying, reduces appetite signals sent to the brain, and improves insulin sensitivity. The result: patients eat less, feel full longer, and lose substantial weight over time. It was the drug that proved medical weight loss at scale was possible, and it remains the most studied GLP-1 therapy available today.</p></div>
+        </div>
+        <div class="faq-item reveal delay-1">
+          <button class="faq-question" onclick="toggleFaq(this)">Is compounded Semaglutide safe and legal?<span class="faq-icon"><i class="fas fa-plus"></i></span></button>
+          <div class="faq-answer"><p>Yes. Compounded medications are legal under federal law and are prepared by state-licensed, 503A compounding pharmacies that follow strict USP standards for quality and sterility. Precision Telemed exclusively works with licensed 503A pharmacies — never "research-grade" suppliers. All prescriptions are issued by board-certified physicians following a proper medical consultation. Our compounded Semaglutide uses the same active molecule as brand-name formulations.</p></div>
+        </div>
+        <div class="faq-item reveal delay-2">
+          <button class="faq-question" onclick="toggleFaq(this)">Why is compounded Semaglutide so much cheaper than brand-name?<span class="faq-icon"><i class="fas fa-plus"></i></span></button>
+          <div class="faq-answer"><p>Brand-name GLP-1 medications carry enormous costs: patent exclusivity, brand premiums, insurance navigation, and retail pharmacy markups. Compounded Semaglutide uses the same active ingredient but is prepared by licensed 503A pharmacies without these overhead costs. You're getting the same clinically proven molecule at a fraction of the price. At $149 your first month then $199/mo, you get every dose level from 0.25 mg to 2.5 mg — no surprises.</p></div>
+        </div>
+        <div class="faq-item reveal delay-3">
+          <button class="faq-question" onclick="toggleFaq(this)">How quickly will I see results with Semaglutide?<span class="faq-icon"><i class="fas fa-plus"></i></span></button>
+          <div class="faq-answer"><p>Most patients notice reduced appetite and fewer cravings within the first 1–2 weeks. Measurable weight loss typically begins within the first month. The STEP 1 clinical trial showed an average of 14.9% total body weight reduction over 68 weeks at maximum dose. Most Precision Telemed patients report noticeable progress by weeks 4–8, with results accelerating as the dose is titrated upward over time.</p></div>
+        </div>
+        <div class="faq-item reveal delay-4">
+          <button class="faq-question" onclick="toggleFaq(this)">Is there a subscription or long-term commitment?<span class="faq-icon"><i class="fas fa-plus"></i></span></button>
+          <div class="faq-answer"><p>Absolutely not. Every Precision Telemed plan is month-to-month. There are no subscriptions, no long-term contracts, and no cancellation fees. You can pause or stop at any time. We believe you should stay because the results are working — not because you're locked in.</p></div>
+        </div>
+        <div class="faq-item reveal delay-5">
+          <button class="faq-question" onclick="toggleFaq(this)">How does Semaglutide compare to Tirzepatide?<span class="faq-icon"><i class="fas fa-plus"></i></span></button>
+          <div class="faq-answer"><p>Semaglutide is the original GLP-1 pioneer — it activates one receptor (GLP-1) and delivers average weight loss of ~14.9% over 68 weeks. Tirzepatide is a newer dual-action drug that activates both GLP-1 and GIP receptors, producing average weight loss of ~22.5% over 72 weeks. Both are excellent options. Semaglutide is ideal for patients seeking the proven, well-documented original GLP-1 therapy at the most affordable price point. Our physicians can help you decide which is right for you during your consultation.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">What states is this available in?<span class="faq-icon"><i class="fas fa-plus"></i></span></button>
+          <div class="faq-answer"><p>Precision Telemed is available in all 50 states. Our network of board-certified physicians are licensed across the country, and our partner pharmacies ship nationwide. Wherever you are in the US, you can complete your assessment, consult with a doctor, and receive your medication at home.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta__bg">
+      <img src="images/final-cta-bg.jpg" alt="" role="presentation" />
+    </div>
+    <div class="final-cta__glow"></div>
+    <div class="container">
+      <div class="final-cta__inner">
+        <div class="eyebrow eyebrow--light reveal" style="justify-content:center; margin-bottom:1.5rem;"><span class="eyebrow__dot"></span> Ready to Begin?</div>
+        <h2 class="final-cta__title reveal delay-1">Your Transformation<br/>Starts Today</h2>
+        <p class="final-cta__sub reveal delay-2">Join thousands of patients who have already reclaimed their health with the original GLP-1 — Precision Telemed's Semaglutide program. $149 your first month, $199/mo after. No subscriptions. No surprises. Just results.</p>
+        <div class="final-cta__ctas reveal delay-3">
+          <a href="https://precisiontelemed.com/start-your-weight-loss-program-semaglutide/" target="_blank" rel="noopener" class="btn btn--white btn--lg btn--pulse">
+            Check My Eligibility — Free &nbsp;<i class="fas fa-arrow-right btn__arrow"></i>
+          </a>
+          <a href="https://precisiontelemed.com/start-general-consultation-program/" target="_blank" rel="noopener" class="btn btn--ghost-white btn--lg">Consult a Doctor First</a>
+        </div>
+        <div class="final-cta__trust reveal delay-4">
+          <span class="fct-item"><i class="fas fa-shield-halved"></i> HIPAA Compliant</span>
+          <span class="fct-item"><i class="fas fa-user-doctor"></i> Board-Certified MDs</span>
+          <span class="fct-item"><i class="fas fa-flask"></i> 503A Pharmacy</span>
+          <span class="fct-item"><i class="fas fa-truck-fast"></i> Free Shipping</span>
+          <span class="fct-item"><i class="fas fa-rotate-left"></i> Cancel Anytime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+
+
+
+  <script>
+
+
+
+
+    function closeMobileNav() { navOpen = false; mobileNav.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); }
+    window.closeMobileNav = closeMobileNav;
+    document.addEventListener('click', e => { if (navOpen && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) closeMobileNav(); });
+
+    // Reveal on scroll
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Counters
+    function animateCounter(el, target, duration) {
+      let start = 0; const step = target / (duration / 16);
+      const timer = setInterval(() => { start = Math.min(start + step, target); el.textContent = Math.floor(start).toLocaleString(); if (start >= target) clearInterval(timer); }, 16);
+    }
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target, parseInt(e.target.dataset.target,10), 1400); counterObs.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.counter[data-target]').forEach(el => counterObs.observe(el));
+
+    // Progress bars
+    const barObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.width = e.target.dataset.width + '%'; barObs.unobserve(e.target); } });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.data-bar-fill').forEach(el => barObs.observe(el));
+
+    // Calculator
+    const weightSlider = document.getElementById('weight-slider');
+    const pctSlider = document.getElementById('pct-slider');
+    const weightDisplay = document.getElementById('weight-display');
+    const pctDisplay = document.getElementById('pct-display');
+    const calcLoss = document.getElementById('calc-loss');
+    const calcGoal = document.getElementById('calc-goal');
+    function updateCalc() {
+      const w = parseInt(weightSlider.value,10), pct = parseFloat(pctSlider.value);
+      const loss = Math.round(w * pct / 100), goal = w - loss;
+      weightDisplay.textContent = w + ' lbs';
+      pctDisplay.textContent = pct + '%';
+      calcLoss.classList.add('changing');
+      setTimeout(() => { calcLoss.textContent = loss; calcLoss.classList.remove('changing'); }, 150);
+      calcGoal.textContent = goal + ' lbs';
+    }
+    weightSlider.addEventListener('input', updateCalc);
+    pctSlider.addEventListener('input', updateCalc);
+    updateCalc();
+
+    // FAQ
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item'), answer = item.querySelector('.faq-answer'), isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-answer').style.maxHeight = '0'; });
+      if (!isOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+    }
+    window.toggleFaq = toggleFaq;
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return; e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - (2.5*16 + 4.25*16 + 24), behavior: 'smooth' });
+      });
+    });
+
+    // Login button visibility
+    const loginBtn = document.getElementById('nav-login');
+    window.addEventListener('scroll', () => { if (loginBtn) loginBtn.style.display = window.scrollY > 300 ? 'inline-flex' : 'none'; }, { passive: true });
+
+    // Hero entry animation
+    window.addEventListener('load', () => {
+      document.querySelectorAll('#hero .reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), i * 140 + 100));
+    });
+
+    // Doctors Carousel
+    (() => {
+      const track = document.getElementById('doc-track');
+      const trackWrap = document.getElementById('doc-track-wrap');
+      const prevBtn = document.getElementById('doc-prev');
+      const nextBtn = document.getElementById('doc-next');
+      const dotsWrap = document.getElementById('doc-dots');
+      const progBar = document.getElementById('doc-progress-bar');
+      const cards = track.querySelectorAll('.doctor-card');
+      const TOTAL = cards.length, CARD_W = 300, GAP = 24;
+      let currentIdx = 0, visibleCount = 1, autoTimer = null;
+
+      function getVisibleCount() { return Math.max(1, Math.floor((trackWrap.clientWidth + GAP) / (CARD_W + GAP))); }
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const pages = Math.max(1, TOTAL - visibleCount + 1);
+        for (let i = 0; i < pages; i++) {
+          const btn = document.createElement('button');
+          btn.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          btn.setAttribute('role','tab'); btn.setAttribute('aria-label',`Go to doctor ${i+1}`);
+          btn.addEventListener('click', () => goTo(i)); dotsWrap.appendChild(btn);
+        }
+      }
+      function updateState() {
+        const pages = Math.max(1, TOTAL - visibleCount + 1);
+        track.style.transform = `translateX(-${currentIdx * (CARD_W + GAP)}px)`;
+        cards.forEach((c, i) => c.classList.toggle('active', i === currentIdx));
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === currentIdx));
+        progBar.style.width = Math.max(14, pages > 1 ? (currentIdx / (pages - 1)) * 100 : 100) + '%';
+        prevBtn.disabled = currentIdx === 0; nextBtn.disabled = currentIdx >= pages - 1;
+      }
+      function goTo(idx) { const pages = Math.max(1, TOTAL - visibleCount + 1); currentIdx = Math.max(0, Math.min(idx, pages - 1)); updateState(); resetAuto(); }
+      prevBtn.addEventListener('click', () => goTo(currentIdx - 1));
+      nextBtn.addEventListener('click', () => goTo(currentIdx + 1));
+      trackWrap.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') goTo(currentIdx - 1); if (e.key === 'ArrowRight') goTo(currentIdx + 1); });
+
+      let dragStartX = 0, isDragging = false, dragOffset = 0;
+      function dragStart(x) { isDragging = true; dragStartX = x; track.style.transition = 'none'; }
+      function dragMove(x) { if (!isDragging) return; dragOffset = x - dragStartX; track.style.transform = `translateX(${-(currentIdx * (CARD_W + GAP)) + dragOffset}px)`; }
+      function dragEnd() { if (!isDragging) return; isDragging = false; track.style.transition = ''; if (dragOffset < -60) goTo(currentIdx + 1); else if (dragOffset > 60) goTo(currentIdx - 1); else updateState(); dragOffset = 0; }
+      trackWrap.addEventListener('mousedown', e => dragStart(e.clientX));
+      window.addEventListener('mousemove', e => { if (isDragging) dragMove(e.clientX); });
+      window.addEventListener('mouseup', () => dragEnd());
+      trackWrap.addEventListener('touchstart', e => dragStart(e.touches[0].clientX), { passive: true });
+      trackWrap.addEventListener('touchmove', e => dragMove(e.touches[0].clientX), { passive: true });
+      trackWrap.addEventListener('touchend', () => dragEnd());
+
+      function autoPlay() { autoTimer = setInterval(() => { const pages = Math.max(1, TOTAL - visibleCount + 1); goTo(currentIdx >= pages - 1 ? 0 : currentIdx + 1); }, 4500); }
+      function resetAuto() { clearInterval(autoTimer); autoPlay(); }
+      trackWrap.addEventListener('mouseenter', () => clearInterval(autoTimer));
+      trackWrap.addEventListener('mouseleave', () => autoPlay());
+      let resizeTimer;
+      window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { visibleCount = getVisibleCount(); buildDots(); goTo(Math.min(currentIdx, Math.max(0, TOTAL - visibleCount))); }, 150); });
+
+      visibleCount = getVisibleCount(); buildDots(); updateState(); autoPlay();
+
+      const docSection = document.querySelector('.doctors-section');
+      new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { docSection.querySelectorAll('.reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), i * 120)); } });
+      }, { threshold: 0.1 }).observe(docSection);
+    })();
+
+    /* ── Scarcity countdown — persists across visits via localStorage ── */
+    (function() {
+      const STORAGE_KEY = 'pt_sem_slots';
+      const TIMER_KEY   = 'pt_sem_next_drop';
+      const MIN_SLOTS   = 3;
+      const MAX_SLOTS   = 12;
+
+      function getSlots() {
+        const stored = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+        if (!stored || isNaN(stored)) {
+          const initial = 7 + Math.floor(Math.random() * (MAX_SLOTS - 7 + 1));
+          localStorage.setItem(STORAGE_KEY, initial);
+          const interval = (4 + Math.random() * 4) * 60 * 60 * 1000;
+          localStorage.setItem(TIMER_KEY, Date.now() + interval);
+          return initial;
+        }
+        return stored;
+      }
+
+      function maybeDecrement(slots) {
+        const nextDrop = parseInt(localStorage.getItem(TIMER_KEY), 10);
+        if (!nextDrop || Date.now() >= nextDrop) {
+          const newSlots = Math.max(MIN_SLOTS, slots - 1);
+          localStorage.setItem(STORAGE_KEY, newSlots);
+          const interval = (4 + Math.random() * 4) * 60 * 60 * 1000;
+          localStorage.setItem(TIMER_KEY, Date.now() + interval);
+          return newSlots;
+        }
+        return slots;
+      }
+
+      function renderSlots(n) {
+        const floatingText = null;
+        const stickyNum    = document.getElementById('sticky-scarcity-num');
+        const label = n <= 4 ? 'Only ' + n + ' spots left — filling fast' : 'Only ' + n + ' spots left this week';
+        if (floatingText) floatingText.textContent = label;
+        if (stickyNum)    stickyNum.textContent = n;
+      }
+
+      renderSlots(maybeDecrement(getSlots()));
+    })();
+
+    // ── Science Chart (STEP 1 Trial weight-loss curve) ──────────────────
+    (function() {
+      const canvas = document.getElementById('sema-science-chart');
+      if (!canvas || typeof Chart === 'undefined') return;
+
+      // Week labels (0–68) sampled at key intervals
+      const weeks = [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68];
+
+      // Approximate mean % body weight change from STEP 1 trial data
+      const semaData  = [0, -2.1, -3.8, -5.2, -6.5, -7.6, -8.6, -9.4, -10.1, -10.8, -11.4, -12.0, -12.5, -13.0, -13.5, -13.9, -14.4, -14.9];
+      const placeboData = [0, -0.4, -0.7, -1.0, -1.2, -1.4, -1.5, -1.6, -1.7, -1.8, -1.9, -2.0, -2.1, -2.2, -2.2, -2.3, -2.4, -2.4];
+
+      const primary  = '#788C75';
+      const gridCol  = 'rgba(255,255,255,0.07)';
+      const textCol  = 'rgba(255,255,255,0.45)';
+
+      new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels: weeks,
+          datasets: [
+            {
+              label: 'Semaglutide 2.4 mg',
+              data: semaData,
+              borderColor: primary,
+              backgroundColor: 'rgba(120,140,117,0.12)',
+              borderWidth: 2.5,
+              pointRadius: 0,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: primary,
+              fill: true,
+              tension: 0.4
+            },
+            {
+              label: 'Placebo',
+              data: placeboData,
+              borderColor: 'rgba(255,255,255,0.35)',
+              backgroundColor: 'rgba(255,255,255,0.04)',
+              borderWidth: 1.5,
+              borderDash: [5, 4],
+              pointRadius: 0,
+              pointHoverRadius: 4,
+              pointHoverBackgroundColor: 'rgba(255,255,255,0.7)',
+              fill: true,
+              tension: 0.4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(10,22,14,0.92)',
+              borderColor: 'rgba(120,140,117,0.4)',
+              borderWidth: 1,
+              titleColor: 'rgba(255,255,255,0.85)',
+              bodyColor: 'rgba(255,255,255,0.65)',
+              padding: 10,
+              callbacks: {
+                title: ctx => 'Week ' + ctx[0].label,
+                label: ctx => ' ' + ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(1) + '%'
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: { display: true, text: 'Weeks', color: textCol, font: { size: 10 } },
+              ticks: { color: textCol, font: { size: 10 }, maxTicksLimit: 9 },
+              grid: { color: gridCol },
+              border: { color: 'rgba(255,255,255,0.1)' }
+            },
+            y: {
+              title: { display: true, text: '% Change in Body Weight', color: textCol, font: { size: 10 } },
+              ticks: {
+                color: textCol, font: { size: 10 },
+                callback: v => v + '%'
+              },
+              grid: { color: gridCol },
+              border: { color: 'rgba(255,255,255,0.1)' },
+              min: -17, max: 1
+            }
+          }
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
